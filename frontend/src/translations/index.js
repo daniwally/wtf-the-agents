@@ -66,6 +66,54 @@ const t = {
       en: '*Based on aggregated data from WTF Agency client implementations 2024-2026',
       pt: '*Baseado em dados agregados de implementações com clientes da WTF Agency 2024-2026',
     },
+    focusTitle: {
+      es: 'Diseñados para transformar',
+      en: 'Designed to transform',
+      pt: 'Projetados para transformar',
+    },
+    focusSubtitle: {
+      es: 'Tres pilares que cambian las reglas del juego en tu empresa.',
+      en: 'Three pillars that change the rules of the game in your company.',
+      pt: 'Três pilares que mudam as regras do jogo na sua empresa.',
+    },
+    focus: [
+      {
+        title: {
+          es: 'Agentes para directores',
+          en: 'Agents for directors',
+          pt: 'Agentes para diretores',
+        },
+        description: {
+          es: 'Potenciá la toma de decisiones con agentes que analizan datos en tiempo real, generan reportes ejecutivos y anticipan escenarios. Tu C-suite con superpoderes, sin sumar headcount.',
+          en: 'Empower decision-making with agents that analyze real-time data, generate executive reports, and anticipate scenarios. Your C-suite with superpowers, without adding headcount.',
+          pt: 'Potencialize a tomada de decisões com agentes que analisam dados em tempo real, geram relatórios executivos e antecipam cenários. Seu C-suite com superpoderes, sem aumentar headcount.',
+        },
+      },
+      {
+        title: {
+          es: 'Control de gestión inteligente',
+          en: 'Intelligent management control',
+          pt: 'Controle de gestão inteligente',
+        },
+        description: {
+          es: 'Dashboards vivos, alertas automáticas y seguimiento de KPIs sin intervención humana. Detectá desvíos antes de que sean problemas y mantené el pulso de tu operación 24/7.',
+          en: 'Live dashboards, automatic alerts, and KPI tracking without human intervention. Detect deviations before they become problems and keep your operation\'s pulse 24/7.',
+          pt: 'Dashboards ao vivo, alertas automáticos e acompanhamento de KPIs sem intervenção humana. Detecte desvios antes que virem problemas e mantenha o pulso da sua operação 24/7.',
+        },
+      },
+      {
+        title: {
+          es: 'Calidad de vida empresarial',
+          en: 'Business quality of life',
+          pt: 'Qualidade de vida empresarial',
+        },
+        description: {
+          es: 'Automatizá los procesos tediosos que drenan energía de tu equipo. Menos tareas repetitivas, menos errores, menos burnout. Tu gente se enfoca en lo que importa: pensar, crear y crecer.',
+          en: 'Automate the tedious processes that drain your team\'s energy. Less repetitive tasks, fewer errors, less burnout. Your people focus on what matters: thinking, creating, and growing.',
+          pt: 'Automatize os processos tediosos que drenam a energia do seu time. Menos tarefas repetitivas, menos erros, menos burnout. Sua equipe foca no que importa: pensar, criar e crescer.',
+        },
+      },
+    ],
   },
 
   // ── Hero ──

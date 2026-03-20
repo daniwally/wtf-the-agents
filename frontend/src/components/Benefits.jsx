@@ -34,6 +34,25 @@ export const Benefits = () => {
         <div className="mt-12 text-center">
           <p className="font-mono text-xs text-neutral-600">{t.benefits.source[lang]}</p>
         </div>
+
+        {/* Focus areas */}
+        <div className="mt-20 md:mt-28 pt-16 border-t border-white/5">
+          <div className="text-center mb-12">
+            <h3 className="font-black text-3xl md:text-4xl tracking-tight uppercase mb-3">
+              {t.benefits.focusTitle[lang]}
+            </h3>
+            <p className="font-light text-neutral-500 max-w-xl mx-auto">{t.benefits.focusSubtitle[lang]}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {t.benefits.focus.map((item, index) => (
+              <div key={index} className="group bg-[#0a0a0a] border border-white/5 hover:border-[#FFD700]/30 p-8 transition-all duration-500" data-testid={`benefit-focus-${index}`}>
+                <span className="font-mono text-[#FFD700] text-4xl font-black opacity-30 block mb-4">{index + 1}</span>
+                <h4 className="font-black text-xl tracking-tight uppercase mb-3 group-hover:text-[#FFD700] transition-colors">{item.title[lang]}</h4>
+                <p className="font-light text-sm text-neutral-400 leading-relaxed">{item.description[lang]}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
