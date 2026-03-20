@@ -21,7 +21,7 @@ export const HowItWorks = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
           {t.howItWorks.steps.map((step, index) => {
             const Icon = STEP_ICONS[index];
-            const num = String(index + 1).padStart(2, '0');
+            const num = index + 1;
             return (
               <div
                 key={num}
@@ -29,7 +29,7 @@ export const HowItWorks = () => {
                 style={{ animationDelay: `${index * 150}ms` }}
                 data-testid={`step-${num}`}
               >
-                <span className="font-mono text-[#FFD700] text-6xl md:text-7xl font-black mb-4 block opacity-30">{num}</span>
+                <span className="font-mono text-[#FFD700] text-5xl md:text-6xl font-black mb-4 block opacity-30">{num}</span>
                 <Icon className="text-white/40 group-hover:text-[#FFD700] transition-colors mb-4" size={28} />
                 <h3 className="font-black text-2xl tracking-tight mb-3">{step.title[lang]}</h3>
                 <p className="font-light text-neutral-400 leading-relaxed">{step.description[lang]}</p>
