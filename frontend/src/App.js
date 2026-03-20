@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "@/App.css";
+import { Analytics } from "@vercel/analytics/react";
 import { LanguageProvider } from "./context/LanguageContext";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
@@ -47,6 +48,7 @@ function App() {
           onClose={() => setIsTrialOpen(false)}
           selectedPack={null}
         />
+        <Analytics />
       </div>
     </LanguageProvider>
   );
