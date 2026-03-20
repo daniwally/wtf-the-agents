@@ -4,6 +4,7 @@ import { useLang } from '../context/LanguageContext';
 import t from '../translations';
 
 const HERO_VIDEOS = [
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/blf7g8fo_Slow_Motion_Video_8cRVc11b.mp4',
   'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/lpskj4pc_freepik_un-video-en-camara-lenta-el-viento-es-suave-y-muev_seedance_720p_16-9_24fps_4548.mp4',
   'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/xcs7yv5r_freepik_un-video-en-camara-lenta-el-viento-es-suave-y-muev_seedance_720p_16-9_24fps_4549.mp4',
   'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/1ph0q90q_Slow_Motion_Video_vnFky6ed.mp4',
