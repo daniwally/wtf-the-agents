@@ -10,10 +10,10 @@ const IMAGES = [
   'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/hynf5l9e_008_A_person_with_short_dark_wavy_hair_and_brown_XrWOFcBE.png',
   'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/1hvfijhm_003_In_a_portrait_style_a_woman_with_blonde_hair_25W5XFJK.png',
   'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/wf828von_004_A_man_with_dark_curly_hair_and_brown_eyes_is_E6z26RE1.png',
-  'https://images.unsplash.com/photo-1669388178278-442a9f305f97?crop=entropy&cs=srgb&fm=jpg&q=85',
-  'https://images.unsplash.com/photo-1769636929231-3cd7f853d038?crop=entropy&cs=srgb&fm=jpg&q=85',
-  'https://images.unsplash.com/photo-1764545973653-94c40d993495?crop=entropy&cs=srgb&fm=jpg&q=85',
-  'https://images.unsplash.com/photo-1770894807442-108cc33c0a7a?crop=entropy&cs=srgb&fm=jpg&q=85',
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/qnf9ug67_005_A_woman_with_dark_hair_pulled_back_and_brown_eyes_cJ7aw0fd.png',
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/0jtlpica_001_In_a_studio_portrait_style_a_woman_with_dark_8qg4iJbJ.png',
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/dodd6yp3_Headshot_Varieties_s4uJsiQa.png',
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/o6vkdym2_Headshot_Varieties_KjSGdYqK.png',
 ];
 const SKILLS = [
   ['Branding', 'UI/UX', 'Social Media Graphics', 'Presentaciones', 'Packaging'],
