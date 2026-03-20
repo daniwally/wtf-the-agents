@@ -8,54 +8,50 @@ Landing page para venta de agentes IA especializados para empresas latinoamerica
 - **Gerentes**: Necesitan automatizar tareas repetitivas de sus equipos
 - **Target**: Argentina y Latinoamérica
 
-## Requisitos Core (Estáticos)
+## Requisitos Core
 - Paleta: Negro #000000 + Blanco #ffffff + Amarillo #FFD700
 - Tipografía: Inter (Thin/Bold contrast)
 - Estilo: Editorial premium, Vogue + SaaS moderno
 - Mobile-first responsive
 - Tono argentino canchero pero profesional
+- Multiidioma: Español (principal), Inglés, Portugués
 
 ## Implementado
 
-### Backend (/app/backend/server.py)
-- FastAPI + MongoDB
-- POST /api/trial - Captura leads (email, nombre, empresa, teléfono)
-- GET /api/trials - Lista leads
-- POST /api/chat - Demo con Rock usando Claude Sonnet 4 via emergentintegrations (EMERGENT_LLM_KEY)
-- Persistencia de mensajes de chat en MongoDB
-
-### Frontend (/app/frontend/src/)
-- Header con navegación sticky + mobile hamburger
+### Frontend (React en Vercel)
+- Header con navegación sticky + selector de idioma (ES/EN/PT)
 - Hero section: "Tu próximo equipo no tiene LinkedIn" + carrusel de imágenes
-- Grid de 9 agentes con cards expandibles (Vera, Milo, Nora, Otto, Lena, Rock, Sofia, Hugo, Tina)
-- Modales con detalles completos de cada agente
+- Grid de 9 agentes con cards expandibles
 - Sección "Cómo funciona" - 4 pasos
 - Pricing con 3 tiers (STARTER, PRO, ENTERPRISE)
 - Sección WTF Agency con logos de clientes
-- Dream Team section
-- Chatbot demo con Rock (Claude Sonnet 4 real)
-- Formulario de trial con validación
+- Dream Team section con foto de equipo
+- Chatbot demo con Rock
+- Formulario de trial
 - Footer con CTAs
-- Animaciones y microinteracciones
-- Responsive mobile-first
+- Sistema de internacionalización completo (ES/EN/PT)
 
-### Integraciones
-- Claude Sonnet 4 via emergentintegrations (EMERGENT_LLM_KEY) - FUNCIONANDO
-- MongoDB para persistencia de datos
+### Backend (Vercel Serverless - api/index.py)
+- POST /api/trial - Captura leads
+- POST /api/chat - Demo con Rock usando Anthropic SDK
+- GET /api/trials - Lista leads
 
 ### Deployment
-- Configurado para Railway (Procfile, railway.toml, railway.json)
-- Dominio personalizado: theagents.wtf (DNS en GoDaddy)
+- **Plataforma**: Vercel
+- **Dominio**: theagents.wtf
+- **DNS**: GoDaddy
+- **Repo**: github.com/daniwally/theagents-landing
 
-## Backlog Priorizado
+## Backlog
 
-### P1 - Alta prioridad
-- Integrar link real de Calendly cuando el cliente lo proporcione
-- Agregar logos reales de clientes tier-1
+### P1
+- Configurar ANTHROPIC_API_KEY en Vercel para activar chat de Rock
+- Configurar MongoDB Atlas + MONGO_URL en Vercel para guardar leads
 - Analytics/tracking de conversión
 
-### P2 - Mejoras
-- A/B testing de headlines
+### P2
+- Integrar Calendly real
+- Logos reales de clientes
 - Testimoniales/case studies
 - Video demo de los agentes
 - Integración con CRM para leads
