@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react';
 import { useLang } from '../context/LanguageContext';
 import t from '../translations';
 
-const HERO_VIDEOS = [
-  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/blf7g8fo_Slow_Motion_Video_8cRVc11b.mp4',
-  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/lpskj4pc_freepik_un-video-en-camara-lenta-el-viento-es-suave-y-muev_seedance_720p_16-9_24fps_4548.mp4',
-  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/xcs7yv5r_freepik_un-video-en-camara-lenta-el-viento-es-suave-y-muev_seedance_720p_16-9_24fps_4549.mp4',
+const HERO_MEDIA = [
+  { type: 'video', src: 'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/lpskj4pc_freepik_un-video-en-camara-lenta-el-viento-es-suave-y-muev_seedance_720p_16-9_24fps_4548.mp4' },
+  { type: 'video', src: 'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/xcs7yv5r_freepik_un-video-en-camara-lenta-el-viento-es-suave-y-muev_seedance_720p_16-9_24fps_4549.mp4' },
+  { type: 'image', src: 'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/3fvkgzai_u2462154512_THE_AGENTS_by_WTF_hero_campaign_visual._Next-gene_05ee410d-a83f-413d-9a24-4f3ece517a0d_3.png' },
 ];
 
 export const Hero = ({ onCTAClick }) => {
@@ -15,7 +15,7 @@ export const Hero = ({ onCTAClick }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentVideo((prev) => (prev + 1) % HERO_VIDEOS.length);
+      setCurrentVideo((prev) => (prev + 1) % HERO_MEDIA.length);
     }, 8000);
     return () => clearInterval(interval);
   }, []);
@@ -29,16 +29,24 @@ export const Hero = ({ onCTAClick }) => {
     <section className="min-h-screen flex flex-col justify-center relative pt-20 pb-12 overflow-hidden" data-testid="hero-section">
       {/* Background videos carousel */}
       <div className="absolute inset-0 overflow-hidden">
-        {HERO_VIDEOS.map((vid, index) => (
-          <video
-            key={index}
-            src={vid}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className={`absolute top-0 right-0 w-full lg:w-3/5 h-full object-cover transition-opacity duration-1000 ${index === currentVideo ? 'opacity-100' : 'opacity-0'}`}
-          />
+        {HERO_MEDIA.map((item, index) => (
+          item.type === 'video' ? (
+            <video
+              key={index}
+              src={item.src}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className={`absolute top-0 right-0 w-full lg:w-3/5 h-full object-cover transition-opacity duration-1000 ${index === currentVideo ? 'opacity-100' : 'opacity-0'}`}
+            />
+          ) : (
+            <div
+              key={index}
+              className={`absolute top-0 right-0 w-full lg:w-3/5 h-full transition-opacity duration-1000 ${index === currentVideo ? 'opacity-100' : 'opacity-0'}`}
+              style={{ backgroundImage: `url(${item.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            />
+          )
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 via-40% to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
@@ -78,7 +86,7 @@ export const Hero = ({ onCTAClick }) => {
         </div>
       </div>
       <div className="absolute bottom-8 right-8 hidden lg:flex gap-2 z-20">
-        {HERO_VIDEOS.map((_, index) => (
+        {HERO_MEDIA.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentVideo(index)}
