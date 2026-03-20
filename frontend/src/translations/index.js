@@ -5,6 +5,69 @@ const t = {
     howItWorks: { es: 'Cómo funciona', en: 'How it works', pt: 'Como funciona' },
   },
 
+  // ── Benefits ──
+  benefits: {
+    label: { es: 'El impacto', en: 'The impact', pt: 'O impacto' },
+    title1: {
+      es: 'Es como sumar 15',
+      en: 'It\'s like adding 15',
+      pt: 'É como adicionar 15',
+    },
+    title2: {
+      es: 'empleados full-time.',
+      en: 'full-time employees.',
+      pt: 'funcionários full-time.',
+    },
+    subtitle: {
+      es: 'Las empresas que adoptan agentes IA reportan resultados medibles desde el primer mes.',
+      en: 'Companies adopting AI agents report measurable results from the first month.',
+      pt: 'Empresas que adotam agentes de IA reportam resultados mensuráveis desde o primeiro mês.',
+    },
+    stats: [
+      {
+        label: { es: 'Reducción de costos', en: 'Cost reduction', pt: 'Redução de custos' },
+        value: '73%',
+        description: {
+          es: 'Reducción promedio en costos operativos vs. contratar un equipo humano equivalente para las mismas tareas.',
+          en: 'Average reduction in operational costs vs. hiring an equivalent human team for the same tasks.',
+          pt: 'Redução média em custos operacionais vs. contratar uma equipe humana equivalente para as mesmas tarefas.',
+        },
+      },
+      {
+        label: { es: 'Horas ahorradas', en: 'Hours saved', pt: 'Horas economizadas' },
+        value: '2,400+',
+        description: {
+          es: 'Horas mensuales que tus equipos recuperan al delegar tareas repetitivas a agentes IA especializados.',
+          en: 'Monthly hours your teams reclaim by delegating repetitive tasks to specialized AI agents.',
+          pt: 'Horas mensais que suas equipes recuperam ao delegar tarefas repetitivas a agentes de IA especializados.',
+        },
+      },
+      {
+        label: { es: 'Velocidad de respuesta', en: 'Response speed', pt: 'Velocidade de resposta' },
+        value: '24/7',
+        description: {
+          es: 'Tus agentes trabajan sin descanso. Respuestas inmediatas a clientes, leads y procesos internos a cualquier hora.',
+          en: 'Your agents work non-stop. Immediate responses to clients, leads, and internal processes at any hour.',
+          pt: 'Seus agentes trabalham sem parar. Respostas imediatas a clientes, leads e processos internos a qualquer hora.',
+        },
+      },
+      {
+        label: { es: 'Retorno de inversión', en: 'Return on investment', pt: 'Retorno do investimento' },
+        value: '<90d',
+        description: {
+          es: 'Tiempo promedio para recuperar la inversión inicial. La mayoría de nuestros clientes ven ROI positivo en menos de 3 meses.',
+          en: 'Average time to recover the initial investment. Most of our clients see positive ROI in under 3 months.',
+          pt: 'Tempo médio para recuperar o investimento inicial. A maioria dos nossos clientes vê ROI positivo em menos de 3 meses.',
+        },
+      },
+    ],
+    source: {
+      es: '*Basado en datos agregados de implementaciones con clientes de WTF Agency 2024-2026',
+      en: '*Based on aggregated data from WTF Agency client implementations 2024-2026',
+      pt: '*Baseado em dados agregados de implementações com clientes da WTF Agency 2024-2026',
+    },
+  },
+
   // ── Hero ──
   hero: {
     poweredBy: { es: 'Powered by WTF Agency', en: 'Powered by WTF Agency', pt: 'Powered by WTF Agency' },

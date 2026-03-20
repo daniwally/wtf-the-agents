@@ -3,6 +3,7 @@ import "@/App.css";
 import { LanguageProvider } from "./context/LanguageContext";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { Benefits } from "./components/Benefits";
 import { AgentsGrid } from "./components/AgentsGrid";
 import { HowItWorks } from "./components/HowItWorks";
 import { WhyUs } from "./components/WhyUs";
@@ -30,6 +31,7 @@ function App() {
         <Header onTrialClick={handleTrialClick} />
         <main>
           <Hero onCTAClick={handleTrialClick} />
+          <Benefits />
           <AgentsGrid />
           <HowItWorks />
           <WhyUs />
