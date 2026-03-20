@@ -62,8 +62,8 @@ const AgentModal = ({ agentIndex, onClose, lang }) => {
       <div className="absolute inset-0 bg-black/90 backdrop-blur-sm" />
       <div className="relative bg-[#0a0a0a] border border-white/10 max-w-2xl w-full max-h-[90vh] overflow-auto animate-fade-in-up" onClick={(e) => e.stopPropagation()}>
         <button onClick={onClose} className="absolute top-4 right-4 text-neutral-400 hover:text-white transition-colors z-10" data-testid="modal-close-button"><X size={24} /></button>
-        <div className="relative h-64 md:h-80">
-          <img src={image} alt={agent.name} className="w-full h-full object-cover object-top" />
+        <div className="relative h-80 md:h-[28rem]">
+          <img src={image} alt={agent.name} className="w-full h-full object-contain object-center" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
         </div>
         <div className="p-8 -mt-20 relative z-10">
