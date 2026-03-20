@@ -10,15 +10,24 @@ const HERO_VIDEOS = [
 ];
 
 export const Hero = ({ onCTAClick }) => {
-  const [currentVideo, setCurrentVideo] = useState(0);
+  const [currentVideo, setCurrentVideo] = useState(() => Math.floor(Math.random() * HERO_VIDEOS.length));
   const { lang } = useLang();
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentVideo((prev) => (prev + 1) % HERO_VIDEOS.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
+    const videos = document.querySelectorAll('[data-hero-video]');
+    videos.forEach((v, i) => {
+      if (i === currentVideo) {
+        v.currentTime = 0;
+        v.play().catch(() => {});
+      } else {
+        v.pause();
+      }
+    });
+  }, [currentVideo]);
+
+  const handleVideoEnd = () => {
+    setCurrentVideo((prev) => (prev + 1) % HERO_VIDEOS.length);
+  };
 
   const scrollToAgents = () => {
     const element = document.getElementById('agents');
@@ -33,10 +42,11 @@ export const Hero = ({ onCTAClick }) => {
           <video
             key={index}
             src={vid}
-            autoPlay
+            data-hero-video
+            autoPlay={index === currentVideo}
             muted
-            loop
             playsInline
+            onEnded={index === currentVideo ? handleVideoEnd : undefined}
             className={`absolute top-0 right-0 w-full lg:w-3/5 h-full object-cover transition-opacity duration-1000 ${index === currentVideo ? 'opacity-100' : 'opacity-0'}`}
           />
         ))}
