@@ -5,11 +5,11 @@ import t from '../translations';
 
 const ICONS = [Palette, Megaphone, BarChart3, Settings, Briefcase, ShoppingCart, Headphones, Users, Calculator];
 const IMAGES = [
-  'https://images.unsplash.com/photo-1752074211295-332a3cde530d?crop=entropy&cs=srgb&fm=jpg&q=85',
-  'https://images.unsplash.com/photo-1761882469824-f77e7c07e85a?crop=entropy&cs=srgb&fm=jpg&q=85',
-  'https://images.unsplash.com/photo-1742473716788-72ec6df8a830?crop=entropy&cs=srgb&fm=jpg&q=85',
-  'https://images.unsplash.com/photo-1744963129109-3f3fdf8d0b8d?crop=entropy&cs=srgb&fm=jpg&q=85',
-  'https://images.unsplash.com/photo-1630649740072-90a21393545d?crop=entropy&cs=srgb&fm=jpg&q=85',
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/jletx30e_006_A_middle-aged_woman_with_fair_skin_and_graying_LY9AujGL.png',
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/g9x9v7i7_007_A_man_with_dark_hair_and_brown_eyes_is_shown_from_RJ6zoh.png',
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/hynf5l9e_008_A_person_with_short_dark_wavy_hair_and_brown_XrWOFcBE.png',
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/1hvfijhm_003_In_a_portrait_style_a_woman_with_blonde_hair_25W5XFJK.png',
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/wf828von_004_A_man_with_dark_curly_hair_and_brown_eyes_is_E6z26RE1.png',
   'https://images.unsplash.com/photo-1669388178278-442a9f305f97?crop=entropy&cs=srgb&fm=jpg&q=85',
   'https://images.unsplash.com/photo-1769636929231-3cd7f853d038?crop=entropy&cs=srgb&fm=jpg&q=85',
   'https://images.unsplash.com/photo-1764545973653-94c40d993495?crop=entropy&cs=srgb&fm=jpg&q=85',
