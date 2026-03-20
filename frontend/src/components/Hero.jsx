@@ -3,22 +3,20 @@ import { useState, useEffect } from 'react';
 import { useLang } from '../context/LanguageContext';
 import t from '../translations';
 
-const HERO_IMAGES = [
-  'https://customer-assets.emergentagent.com/job_agent-team-demo/artifacts/vz1tin0o_u2462154512_woman_modern_model_about_to_looking_on_a_vert_ram_bcb620c8-9935-4cd2-9411-6261f4d1c979_3%20%281%29.png',
-  'https://customer-assets.emergentagent.com/job_agent-team-demo/artifacts/1b4vz4ol_u2462154512_woman_blonde_modern_model_about_to_looking_on_a_v_69767286-611b-4d34-b76f-e0932459286a_0.png',
-  'https://customer-assets.emergentagent.com/job_agent-team-demo/artifacts/pz4a0246_u2462154512_woman_modern_model_about_to_looking_on_a_vert_ram_746021fc-e5da-4958-8e7d-66ab9b60d8ab_1.png',
-  'https://customer-assets.emergentagent.com/job_agent-team-demo/artifacts/hobchh69_u2462154512_Low-angle_close-up_of_a_person__snowflakes_caught_401be9d9-3c87-429f-a3ad-12c005df5ee7_0.png',
-  'https://customer-assets.emergentagent.com/job_agent-team-demo/artifacts/4rnhs0kd_u2462154512_Low-angle_close-up_of_a_person_holding_a_transpar_98891fd1-56d2-4f49-9a89-e0f9a2d9ae83_0%20%281%29.png',
+const HERO_VIDEOS = [
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/blf7g8fo_Slow_Motion_Video_8cRVc11b.mp4',
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/lpskj4pc_freepik_un-video-en-camara-lenta-el-viento-es-suave-y-muev_seedance_720p_16-9_24fps_4548.mp4',
+  'https://customer-assets.emergentagent.com/job_9f3a9b77-23e8-4a65-b4a7-2e2c2ccb6b8d/artifacts/xcs7yv5r_freepik_un-video-en-camara-lenta-el-viento-es-suave-y-muev_seedance_720p_16-9_24fps_4549.mp4',
 ];
 
 export const Hero = ({ onCTAClick }) => {
-  const [currentImage, setCurrentImage] = useState(0);
+  const [currentVideo, setCurrentVideo] = useState(0);
   const { lang } = useLang();
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % HERO_IMAGES.length);
-    }, 5000);
+      setCurrentVideo((prev) => (prev + 1) % HERO_VIDEOS.length);
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
@@ -29,13 +27,17 @@ export const Hero = ({ onCTAClick }) => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center relative pt-20 pb-12 overflow-hidden" data-testid="hero-section">
-      {/* Background images carousel */}
+      {/* Background videos carousel */}
       <div className="absolute inset-0 overflow-hidden">
-        {HERO_IMAGES.map((img, index) => (
-          <div
+        {HERO_VIDEOS.map((vid, index) => (
+          <video
             key={index}
-            className={`absolute top-0 right-0 w-full lg:w-3/5 h-full transition-opacity duration-1000 ${index === currentImage ? 'opacity-100' : 'opacity-0'}`}
-            style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            src={vid}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={`absolute top-0 right-0 w-full lg:w-3/5 h-full object-cover transition-opacity duration-1000 ${index === currentVideo ? 'opacity-100' : 'opacity-0'}`}
           />
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 via-40% to-transparent" />
@@ -76,11 +78,11 @@ export const Hero = ({ onCTAClick }) => {
         </div>
       </div>
       <div className="absolute bottom-8 right-8 hidden lg:flex gap-2 z-20">
-        {HERO_IMAGES.map((_, index) => (
+        {HERO_VIDEOS.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentImage(index)}
-            className={`w-2 h-2 transition-all duration-300 ${index === currentImage ? 'bg-[#FFD700] w-6' : 'bg-white/30 hover:bg-white/50'}`}
+            onClick={() => setCurrentVideo(index)}
+            className={`w-2 h-2 transition-all duration-300 ${index === currentVideo ? 'bg-[#FFD700] w-6' : 'bg-white/30 hover:bg-white/50'}`}
           />
         ))}
       </div>
