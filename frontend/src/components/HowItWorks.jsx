@@ -29,7 +29,7 @@ export const HowItWorks = () => {
                 style={{ animationDelay: `${index * 150}ms` }}
                 data-testid={`step-${num}`}
               >
-                <span className="font-mono text-[#FFD700] text-sm mb-4 block">{num}</span>
+                <span className="font-mono text-[#FFD700] text-6xl md:text-7xl font-black mb-4 block opacity-30">{num}</span>
                 <Icon className="text-white/40 group-hover:text-[#FFD700] transition-colors mb-4" size={28} />
                 <h3 className="font-black text-2xl tracking-tight mb-3">{step.title[lang]}</h3>
                 <p className="font-light text-neutral-400 leading-relaxed">{step.description[lang]}</p>
